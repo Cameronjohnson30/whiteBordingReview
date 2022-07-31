@@ -14,3 +14,19 @@ function replaceSpaces(string){ //takes string as argument
 console.log(replaceSpaces("Jasmine Ann Jones"));
 
 /// https://stackoverflow.com/questions/20792572/javascript-replace-all-20-with-a-space
+
+///////////////////////////////////////////////////Question 1 recursive
+
+function replaceSpaceRecurse(string){ //create function 'replaceSpaceRecurse' that takes 'string' as an argument.
+  if (string === "") { //base case for string being empty
+    return string; //if string is empty, return it
+  } else if (string[0] === " ") { //check to see if index 0 is an empty space
+    return "%20" + replaceSpaceRecurse(string.substring(1)); //if an empty space replace it with %20
+  } else {
+    return string[0] + replaceSpaceRecurse(string.substring(1)); //after function runs its course, return string with all spaces replaced
+  }
+};
+
+// test
+console.log(replaceSpace("Jasmine Ann Jones")); // "Jasmine%20Ann%20Jones"
+console.log(replaceSpaceRecurse("Jasmine Ann Jones")); // "Jasmine%20Ann%20Jones"
