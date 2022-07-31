@@ -23,10 +23,8 @@ function replaceSpaceRecurse(string){ //create function 'replaceSpaceRecurse' th
   } else if (string[0] === " ") { //check to see if index 0 is an empty space
     return "%20" + replaceSpaceRecurse(string.substring(1)); //if an empty space replace it with %20
   } else {
-    return string[0] + replaceSpaceRecurse(string.substring(1)); //after function runs its course, return string with all spaces replaced
+    return string[0] + replaceSpaceRecurse(string.substring(1)); //after function runs, return string with all spaces replaced
   }
 };
 
-// test
-console.log(replaceSpace("Jasmine Ann Jones")); // "Jasmine%20Ann%20Jones"
-console.log(replaceSpaceRecurse("Jasmine Ann Jones")); // "Jasmine%20Ann%20Jones"
+console.log(replaceSpaceRecurse("Jasmine Ann Jones")); 

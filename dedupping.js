@@ -7,7 +7,7 @@ function dedupping(array) {
        let item = array[i];
        if(seen[item] !== 1) {
             seen[item] = 1; 
-            out[j++] = item;
+            out[j++] = item; // j iterates over to see if its duplicate = the index of index 
        }
   } 
   return out;
@@ -31,16 +31,14 @@ console.log(removeDuplicate([7, 9, "hi", 12, "hi", 7, 53]))
 /////////////////////////////////////////////////Question 2 recursive
 //recursive attempt
 function dedupingRecursive(array){ //creates function 'dudupingRecursive' that takes 'array' as an argument
-  const check = array.slice(0, array.length -1); //variable that slices an array at index 0 with a -1 end point. This creates an offset to extract the last element in the sequence
-  // console.log(check);
+  const check = array.slice(0, array.length -1); //variable that slices an array at index 0 with a -1 end point. 
   const checkElement = array[array.length -1]; //variable
-  // console.log(checkElement);
   if (array.length === 0) { //base case to return an array once it's empty
     return array;
   } else if (check.includes(checkElement)) { //checks to see if the array contains an element
     return dedupingRecursive(check); //calls original function taking 'check' as an argument
   } else {
-    return [...dedupingRecursive(check), checkElement]; //returns a shallow clone of original function with 'check' as an argument
+    return [...dedupingRecursive(check), checkElement]; //returns original function with 'check' as an argument
   }
 };
 

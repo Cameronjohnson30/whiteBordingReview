@@ -24,5 +24,4 @@ function selectionSort(inputArr) {
 let inputArr = [9, 2, 7, 12];
 selectionSort(inputArr);
 console.log(inputArr);
-
 //https://stackabuse.com/selection-sort-in-javascript/
