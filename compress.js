@@ -15,3 +15,5 @@ function compress(string){
     return str
 }
 console.log(compress('aaabccdddda'));
+
+//https://www.geeksforgeeks.org/printing-frequency-of-each-character-just-after-its-consecutive-occurrences/
